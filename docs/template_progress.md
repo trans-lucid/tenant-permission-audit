@@ -10,4 +10,4 @@
 | 6 | payment-recovery-state-machine | golden | outbound payment recovery | Postgres, WireMock, LocalStack SQS | passed in prior repo | passed in prior repo | Distinct from inbound webhooks |
 | 7 | workflow-recovery-reconciler | golden | durable workflow recovery | Postgres, WireMock, LocalStack SQS | passed in prior repo | passed in prior repo | Platform recovery template |
 | 8 | session-lifecycle-reconciler | golden | SaaS auth/session drift | Keycloak-like simulator, Postgres, Redis | passed in prior repo | passed in prior repo | Auth/session template |
-| 9 | tenant-permission-audit | in progress | enterprise SaaS authorization | Postgres, OPA | pending | pending | Current template |
+| 9 | tenant-permission-audit | golden | enterprise SaaS authorization | Postgres, OPA | passed | passed | Fresh-clone proof pending final metadata commit |
