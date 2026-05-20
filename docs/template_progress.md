@@ -11,3 +11,12 @@
 | 7 | workflow-recovery-reconciler | golden | durable workflow recovery | Postgres, WireMock, LocalStack SQS | passed in prior repo | passed in prior repo | Platform recovery template |
 | 8 | session-lifecycle-reconciler | golden | SaaS auth/session drift | Keycloak-like simulator, Postgres, Redis | passed in prior repo | passed in prior repo | Auth/session template |
 | 9 | tenant-permission-audit | golden | enterprise SaaS authorization | Postgres, OPA | passed | passed | Fresh-clone proof pending final metadata commit |
+## Machine-Readable Contract Migration
+
+- machine_readable_manifest: present
+- root_make_aliases: present
+- render_context_support: present
+- check_render_contract: present
+- scan_safety_uses_manifest: present
+- remote_ci_manifest_validation: pending
+
