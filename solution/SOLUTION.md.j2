@@ -1,0 +1,13 @@
+# Solution Notes
+
+The reference implementation treats role assignments as tenant-scoped facts and asks OPA to decide from truthful resource metadata.
+
+Key fixes:
+
+- Policy input uses the real resource tenant, not the requested tenant copied over the resource.
+- Tenant-admin is scoped to the assignment tenant; it is not a global admin shortcut.
+- Role assignment lookup happens per decision, so revocation after cache warmup is enforced.
+- OPA policy evidence is returned to the caller and persisted in the audit log.
+- Regression tests cover same-slug resources, cross-tenant access, stale roles, denied reasons, and evidence quality.
+
+The intended fix surface is `permission_graph.py`, `evaluator.py`, and optionally `policies/access.rego`. Bypassing Postgres or OPA should fail the Docker-backed gate.

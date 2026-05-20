@@ -1,0 +1,28 @@
+{
+  "resources": [
+    {
+      "resource_id": "res_alpha_invoice",
+      "tenant_id": "tenant_alpha",
+      "slug": "billing-summary",
+      "kind": "dashboard",
+      "classification": "internal",
+      "owner_user_id": "user_alpha_admin"
+    },
+    {
+      "resource_id": "res_beta_invoice",
+      "tenant_id": "tenant_beta",
+      "slug": "billing-summary",
+      "kind": "dashboard",
+      "classification": "restricted",
+      "owner_user_id": "user_beta_viewer"
+    },
+    {
+      "resource_id": "res_beta_admin",
+      "tenant_id": "tenant_beta",
+      "slug": "admin-console",
+      "kind": "admin_tool",
+      "classification": "restricted",
+      "owner_user_id": "user_beta_viewer"
+    }
+  ]
+}

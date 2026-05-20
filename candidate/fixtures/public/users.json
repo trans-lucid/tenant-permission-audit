@@ -1,0 +1,11 @@
+{
+  "tenants": [
+    {"tenant_id": "tenant_alpha", "name": "Alpha Health"},
+    {"tenant_id": "tenant_beta", "name": "Beta Finance"}
+  ],
+  "users": [
+    {"user_id": "user_alpha_admin", "email": "alpha.admin@example.test"},
+    {"user_id": "user_beta_viewer", "email": "beta.viewer@example.test"},
+    {"user_id": "user_support", "email": "support@example.test"}
+  ]
+}

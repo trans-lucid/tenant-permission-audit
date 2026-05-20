@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tenant-permission-audit-template"
+version = "0.1.0"
+description = "Internal Translucid tenant permission audit challenge template"
+requires-python = ">=3.12"
+dependencies = []

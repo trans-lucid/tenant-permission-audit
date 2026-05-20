@@ -1,0 +1,3 @@
+{"request_id":"case-own-allow","user_id":"user_alpha_admin","tenant_id":"tenant_alpha","resource_slug":"billing-summary","action":"read","expected_allow":true}
+{"request_id":"case-cross-deny","user_id":"user_alpha_admin","tenant_id":"tenant_beta","resource_slug":"admin-console","action":"write","expected_allow":false}
+{"request_id":"case-viewer-deny","user_id":"user_beta_viewer","tenant_id":"tenant_beta","resource_slug":"admin-console","action":"write","expected_allow":false}

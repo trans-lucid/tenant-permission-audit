@@ -1,0 +1,32 @@
+{
+  "assignments": [
+    {
+      "user_id": "user_alpha_admin",
+      "tenant_id": "tenant_alpha",
+      "role": "admin",
+      "status": "active",
+      "groups": ["alpha-admins"]
+    },
+    {
+      "user_id": "user_alpha_admin",
+      "tenant_id": "tenant_beta",
+      "role": "viewer",
+      "status": "active",
+      "groups": ["beta-viewers"]
+    },
+    {
+      "user_id": "user_beta_viewer",
+      "tenant_id": "tenant_beta",
+      "role": "viewer",
+      "status": "active",
+      "groups": ["beta-viewers"]
+    },
+    {
+      "user_id": "user_support",
+      "tenant_id": "tenant_alpha",
+      "role": "support",
+      "status": "active",
+      "groups": ["support-basic"]
+    }
+  ]
+}

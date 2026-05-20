@@ -1,0 +1,7 @@
+{
+  "allow": false,
+  "reason": "role_not_allowed",
+  "evidence": {
+    "policy": "tenant_rbac_v1"
+  }
+}

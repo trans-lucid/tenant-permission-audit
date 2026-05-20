@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: permissions
+    ports:
+      - "5432:5432"
+  opa:
+    image: openpolicyagent/opa:0.68.0
+    command: ["run", "--server", "--addr=0.0.0.0:8181", "/policies"]
+    volumes:
+      - ../candidate/policies:/policies:ro
+    ports:
+      - "8181:8181"

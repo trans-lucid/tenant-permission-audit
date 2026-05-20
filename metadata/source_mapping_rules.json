@@ -1,0 +1,55 @@
+{
+  "template_id": "tenant-permission-audit",
+  "positive_signals": [
+    "authorization",
+    "permissions",
+    "rbac",
+    "abac",
+    "acl",
+    "opa",
+    "open policy agent",
+    "casbin",
+    "openfga",
+    "spicedb",
+    "tenant_id",
+    "organization",
+    "workspace",
+    "role assignment",
+    "policy",
+    "admin dashboard",
+    "enterprise search",
+    "support desk",
+    "audit log"
+  ],
+  "negative_signals": [
+    "pure frontend only",
+    "no auth path",
+    "single tenant app",
+    "public unauthenticated content only"
+  ],
+  "stack_matches": [
+    "python",
+    "fastapi",
+    "postgres",
+    "node backend",
+    "opa",
+    "casbin",
+    "openfga",
+    "spicedb"
+  ],
+  "best_roles": [
+    "Backend Engineer",
+    "Security Engineer",
+    "Staff Backend",
+    "Full-stack Engineer"
+  ],
+  "personalization_knobs": [
+    "tenant nouns",
+    "resource type",
+    "role names",
+    "group inheritance rules",
+    "policy evidence schema",
+    "audit report fields",
+    "admin route names"
+  ]
+}

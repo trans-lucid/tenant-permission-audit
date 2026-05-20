@@ -1,0 +1,70 @@
+id: tenant-permission-audit
+title: Tenant Permission Audit
+area: enterprise-saas-security
+language: python
+roles:
+  - Backend Engineer
+  - Security Engineer
+  - Staff Backend
+  - Full-stack Engineer
+seniority:
+  - senior
+  - staff
+time_minutes:
+  medium: 70
+  hard: 95
+  staff: 120
+local_environment:
+  required:
+    - docker
+    - docker-compose
+  public_services:
+    - name: postgres
+      purpose: users, tenants, resources, assignments, and audit log
+    - name: opa
+      purpose: local policy decision service
+  hidden_services:
+    - name: docker-compose.evaluator
+      purpose: stricter policy drift and tenant collision fixtures
+  no_external_credentials: true
+  no_cloud_calls: true
+evaluation_axes:
+  - tenant isolation
+  - RBAC and ABAC reasoning
+  - policy evidence quality
+  - stale permission invalidation
+  - regression report quality
+  - production-path discipline
+source_signals:
+  - opa
+  - open policy agent
+  - casbin
+  - openfga
+  - spicedb
+  - rbac
+  - abac
+  - acl
+  - tenant_id
+  - organization
+  - policy
+  - authorization
+  - permission graph
+candidate_expected_failure:
+  - cross_tenant_access_allowed
+  - global_admin_shortcut
+  - missing_policy_evidence
+  - stale_role_cache
+hidden_test_strategy:
+  - same resource slug exists in two tenants
+  - tenant admin is not global admin
+  - role revocation after cache warmup must deny access
+  - group inheritance is tenant scoped
+  - denied access includes reason code
+  - overbroad admin shortcut fails
+forbidden:
+  - one-file-helper
+  - hardcoded-fixtures
+  - bypass-postgres
+  - bypass-opa
+  - global-admin-shortcut
+  - stale-permission-cache
