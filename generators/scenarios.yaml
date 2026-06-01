@@ -16,3 +16,19 @@ hidden:
     - role_revoked_after_cache_warmup
     - denied_reason_required
     - support_group_tenant_scoped
+personalization_profiles:
+  junior:
+    entity_count: low
+    failure_modes: basic
+    hidden_strictness: basic
+    reporting_depth: short
+  senior:
+    entity_count: medium
+    failure_modes: multi_step
+    hidden_strictness: production
+    reporting_depth: operator
+  staff:
+    entity_count: high
+    failure_modes: ambiguous
+    hidden_strictness: adversarial
+    reporting_depth: executive_plus_operator
